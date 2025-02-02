@@ -1,23 +1,151 @@
+/* Global Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f4f4f9;
+    color: #333;
 }
 
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
 header {
     background-color: #333;
     color: white;
-    padding: 20px;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    padding-left: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav ul li a:hover {
+    color: #f7c12e;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    padding: 100px 0;
     text-align: center;
 }
 
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero .btn {
+    background-color: #f7c12e;
+    color: white;
+    padding: 12px 30px;
+    font-size: 1rem;
+    border-radius: 30px;
+    text-decoration: none;
+}
+
+.hero .btn:hover {
+    background-color: #d39b12;
+}
+
+/* About Section */
+.about {
+    background-color: #ffffff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #f4f4f9;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 1.2rem;
+}
+
+.contact a {
+    color: #2a5298;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact a:hover {
+    color: #f7c12e;
+}
+
+/* Footer */
 footer {
     background-color: #333;
     color: white;
+    padding: 20px 0;
     text-align: center;
-    padding: 10px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .about h2 {
+        font-size: 2rem;
+    }
+    
+    .contact h2 {
+        font-size: 2rem;
+    }
 }
