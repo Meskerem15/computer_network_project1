@@ -16,6 +16,7 @@ The site was built with HTML, CSS, and JavaScript and hosted on GitHub Pages.
 Hosting & Domain: Used GitHub Pageswith free HTTPS.
 Website Development: Designed a basic webpage with styling and a script to fetch the user’s public IP.
 Security Measures: Enabled HTTPS, set up a firewall (Cloudflare WAF), and restricted access using .htaccess.
+
 3. Challenges & Solutions
 
 DNS Delay: The domain took time to resolve globally.
