@@ -1,8 +1,11 @@
 Networking Project Report
 
 Group Members: Meklit Taye, Meskerem Haile
+
 Website Link:  https://meskerem15.github.io/computer_network_project1/
+
 GitHub Repository: (https://github.com/Meskerem15/computer_network_project1 )
+
 1. Overview
 
 This project involved creating and hosting a website to demonstrate networking principles like DNS, IP addressing, and HTTPS. 
@@ -29,5 +32,6 @@ The project successfully demonstrated website hosting, networking principles, an
 Future improvements include CDN optimization and user authentication.
 
 Submission Details
+
 Website Link:  https://meskerem15.github.io/computer_network_project1/
 GitHub Repository: (https://github.com/Meskerem15/computer_network_project1 )
