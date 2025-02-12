@@ -22,11 +22,13 @@ Security Measures: Enabled HTTPS, set up a firewall (Cloudflare WAF), and restri
 DNS Delay: The domain took time to resolve globally.
 CORS Issues: Resolved using a CORS-compliant API for fetching IPs.
 HTTPS Setup: Enforced HTTPS to secure data transfer.
+
 4. Networking Concepts Applied
 
 DNS & IP Addressing: Mapped a domain to a server’s public IP.
 HTTP/HTTPS: Used SSL encryption for secure data transfer.
 Security Features: Implemented firewall, HTTPS, and access controls to prevent threats.
+
 5. Conclusion
 
 The project successfully demonstrated website hosting, networking principles, and security best practices. 
