@@ -32,15 +32,21 @@
     <section id="about" class="about">
         <div class="container">
             <h2>About the Project</h2>
-            <p>This project showcases the implementation of networking principles such as DNS, HTTP/HTTPS protocols, and IP addressing. We’ve created a basic but functional website to demonstrate these concepts and provide insights into their practical applications.</p>
+            <p>This project showcases the implementation of networking principles such as DNS, HTTP/HTTPS protocols, and IP addressing.</p>
         </div>
     </section>
 
     <section id="contact" class="contact">
         <div class="container">
             <h2>Contact Us</h2>
-            <p>Have any questions or want to learn more? Reach out to us!</p>
-            <p>Email: <a href="mailto:info@networkproject.com">info@networkproject.com</a></p>
+            <form id="contactForm">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="message" placeholder="Your Message" required></textarea>
+                <input type="hidden" id="csrfToken" name="_csrf"> <!-- CSRF Token -->
+                <button type="submit">Send</button>
+            </form>
+            <p id="responseMessage"></p>
         </div>
     </section>
 
@@ -49,5 +55,7 @@
             <p>&copy; 2025 Computer Networking Project | All rights reserved.</p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
