@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", async () => {
     try {
-        const response = await fetch("http://localhost:5000/csrf-token", { credentials: "include" });
-        const data = await response.json();
-        document.getElementById("csrfToken").value = data.csrfToken;
+        await fetch("http://localhost:5000/csrf-token", {
+            credentials: "include"
+        });
     } catch (error) {
         console.error("Error fetching CSRF token:", error);
     }
@@ -14,7 +14,20 @@ document.getElementById("contactForm").addEventListener("submit", async (event) 
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
     const message = document.getElementById("message").value;
-    const csrfToken = document.getElementById("csrfToken").value;
+
+    // Retrieve CSRF token from cookies
+    const getCookie = (name) => {
+        const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+        return match ? match[2] : "";
+    };
+    const csrfToken = getCookie("XSRF-TOKEN");
+
+    // Retrieve reCAPTCHA response
+    const recaptchaResponse = grecaptcha.getResponse();
+    if (!recaptchaResponse) {
+        document.getElementById("responseMessage").innerText = "Please complete the reCAPTCHA.";
+        return;
+    }
 
     try {
         const response = await fetch("http://localhost:5000/add", {
@@ -24,7 +37,12 @@ document.getElementById("contactForm").addEventListener("submit", async (event) 
                 "CSRF-Token": csrfToken
             },
             credentials: "include",
-            body: JSON.stringify({ name, email, message })
+            body: JSON.stringify({ 
+                name, 
+                email, 
+                message, 
+                "g-recaptcha-response": recaptchaResponse 
+            })
         });
 
         const result = await response.json();

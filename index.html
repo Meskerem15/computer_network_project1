@@ -6,6 +6,7 @@
     <title>Computer Networking Project</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
     <header>
@@ -43,6 +44,10 @@
                 <input type="text" id="name" placeholder="Your Name" required>
                 <input type="email" id="email" placeholder="Your Email" required>
                 <textarea id="message" placeholder="Your Message" required></textarea>
+                
+                <!-- reCAPTCHA widget -->
+                <div class="g-recaptcha" data-sitekey="6LcUv-QqAAAAALSPQ5HEqZ2ZZ6Wp2n5-BabZxoZo"></div>
+                
                 <input type="hidden" id="csrfToken" name="_csrf"> <!-- CSRF Token -->
                 <button type="submit">Send</button>
             </form>
